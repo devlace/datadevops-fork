@@ -7,6 +7,14 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "ddoadfdevvnhf6tvx"
 		},
+		"Ds_AdlsGen2_MelbParkingData_properties_typeProperties_fileName": {
+			"type": "string",
+			"defaultValue": "@dataset().infilename"
+		},
+		"Ds_AdlsGen2_MelbParkingData_properties_typeProperties_folderPath": {
+			"type": "string",
+			"defaultValue": "@concat(dataset().container, '/', dataset().infilefolder)"
+		},
 		"Ls_AdlsGen2_01_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://ddostordevvnhf6tvx.dfs.core.windows.net/"
@@ -19,7 +27,7 @@
 			"type": "string",
 			"defaultValue": "https://ddokvdevvnhf6tvx.vault.azure.net/"
 		},
-		"Ls_Rest_MelParkSensors_properties_typeProperties_url": {
+		"Ls_Rest_MelParkSensors_01_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://data.melbourne.vic.gov.au/resource/"
 		},
@@ -53,14 +61,20 @@
 					"Ls_KeyVault_properties_typeProperties_baseUrl": {
 						"value": "[parameters('Ls_KeyVault_properties_typeProperties_baseUrl')]"
 					},
-					"Ls_Rest_MelParkSensors_properties_typeProperties_url": {
-						"value": "[parameters('Ls_Rest_MelParkSensors_properties_typeProperties_url')]"
+					"Ls_Rest_MelParkSensors_01_properties_typeProperties_url": {
+						"value": "[parameters('Ls_Rest_MelParkSensors_01_properties_typeProperties_url')]"
 					},
 					"Ls_AdlsGen2_01_properties_typeProperties_url": {
 						"value": "[parameters('Ls_AdlsGen2_01_properties_typeProperties_url')]"
 					},
 					"Ls_AzureSQLDW_01_properties_typeProperties_connectionString_secretName": {
 						"value": "[parameters('Ls_AzureSQLDW_01_properties_typeProperties_connectionString_secretName')]"
+					},
+					"Ds_AdlsGen2_MelbParkingData_properties_typeProperties_fileName": {
+						"value": "[parameters('Ds_AdlsGen2_MelbParkingData_properties_typeProperties_fileName')]"
+					},
+					"Ds_AdlsGen2_MelbParkingData_properties_typeProperties_folderPath": {
+						"value": "[parameters('Ds_AdlsGen2_MelbParkingData_properties_typeProperties_folderPath')]"
 					}
 				}
 			},
