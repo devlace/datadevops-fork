@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "ddoadfdevvnhf6tvx"
+		},
+		"Ls_AdlsGen2_01_properties_typeProperties_url": {
+			"value": "https://ddostordevvnhf6tvx.dfs.core.windows.net/"
+		},
+		"Ls_AzureSQLDW_01_properties_typeProperties_connectionString_secretName": {
+			"value": "sqldwConnectionString"
+		},
+		"Ls_KeyVault_properties_typeProperties_baseUrl": {
+			"value": "https://ddokvdevvnhf6tvx.vault.azure.net/"
+		},
+		"Ls_Rest_MelParkSensors_properties_typeProperties_url": {
+			"value": "https://data.melbourne.vic.gov.au/resource/"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
