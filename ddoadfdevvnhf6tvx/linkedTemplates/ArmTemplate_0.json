@@ -229,7 +229,6 @@
 			"type": "Microsoft.DataFactory/factories/pipelines",
 			"apiVersion": "2018-06-01",
 			"properties": {
-				"description": "Hello girls geek sydeny",
 				"activities": [
 					{
 						"name": "StandardizeData",
@@ -272,6 +271,11 @@
 							"libraries": [
 								{
 									"egg": "[parameters('P_Ingest_MelbParkingData_properties_0_typeProperties_0_egg')]"
+								},
+								{
+									"pypi": {
+										"package": "applicationinsights"
+									}
 								}
 							]
 						},
@@ -431,6 +435,11 @@
 							"libraries": [
 								{
 									"egg": "[parameters('P_Ingest_MelbParkingData_properties_4_typeProperties_0_egg')]"
+								},
+								{
+									"pypi": {
+										"package": "applicationinsights"
+									}
 								}
 							]
 						},
