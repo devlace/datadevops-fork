@@ -502,12 +502,12 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/T_Sched_5min')]",
+			"name": "[concat(parameters('factoryName'), '/T_Sched')]",
 			"type": "Microsoft.DataFactory/factories/triggers",
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"annotations": [],
-				"runtimeState": "Stopped",
+				"runtimeState": "Started",
 				"pipelines": [
 					{
 						"pipelineReference": {
@@ -520,8 +520,8 @@
 				"type": "ScheduleTrigger",
 				"typeProperties": {
 					"recurrence": {
-						"frequency": "Minute",
-						"interval": 5,
+						"frequency": "Hour",
+						"interval": 1,
 						"startTime": "2019-02-01T05:28:00.000Z",
 						"timeZone": "UTC"
 					}
